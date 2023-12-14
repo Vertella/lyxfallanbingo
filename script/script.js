@@ -14,7 +14,8 @@ fetch('./lyx.json')
             var elements = document.querySelectorAll('.bingo-text');
             for(var i = 0; i < elements.length; i++){
                 var str = elements[i].innerHTML;
-                elements[i].innerHTML = str.replace("",randomPrompt)
+                console.log(elements);
+                elements[i].innerHTML = str.replace("",randomPrompt);
             }
         });
     });
