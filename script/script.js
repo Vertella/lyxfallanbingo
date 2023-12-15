@@ -1,5 +1,45 @@
 
-let prompts;
+const parent = document.getElementById('bingo-card');
+const bingoCard = document.createDocumentFragment();
+const bingoCoin = new Image(220, 220);
+bingoCoin.src = "images/kr.png";
+const bingoCoinBack = new Image (220, 220);
+bingoCoinBack.src = "images/kr1.png";
+
+fetch('./lyx.json')
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  
+  let bingoCells = data.bingocells;
+
+   bingoCells.forEach(function(bingogay) {
+    i = 0;
+    let bingoCell = document.createElement('div');
+    //let image = document.createElement('img')
+    //let prompt = document.createElement('p');
+    
+    bingoCell.classList.add("bingo-cell");
+    //bingoCell.style.backgroundImage = bingoCoin;
+    //image.classList.add("coinImg");
+
+    bingoPrompt = `${bingoCell.prompt[i]}`;
+
+
+    //bingoCell.appendChild(image);
+    bingoCell.appendChild(bingoPrompt);
+    bingoCard.appendChild(bingoCell);
+    i++;
+  });
+  parent.appendChild(bingoCard);
+  console.log(data);
+});
+
+
+
+
+/*let prompts;
 
 fetch('./lyx.json')
     .then(response => response.json())
@@ -19,4 +59,5 @@ fetch('./lyx.json')
             }
         });
     });
-})
+})*/
+

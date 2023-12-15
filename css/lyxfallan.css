@@ -42,7 +42,7 @@ h1 {
     left: 26.5%;
 }*/
 
-.bingo-card {
+#bingo-card {
     width: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -52,7 +52,6 @@ h1 {
 .bingo-cell {
     width: 100%;
     max-width: 220px;
-
     max-width: 220px;
     background-image: url("../images/kr.png");
     background-size: 100%;
