@@ -13,9 +13,9 @@ fetch('./lyx.json')
 .then((data) => {
   
   let bingoCells = data.bingocells;
+  i = 0;
 
    bingoCells.forEach(function(bingogay) {
-    i = 0;
     let bingoCell = document.createElement('div');
     //let image = document.createElement('img')
     //let prompt = document.createElement('p');
@@ -24,7 +24,7 @@ fetch('./lyx.json')
     //bingoCell.style.backgroundImage = bingoCoin;
     //image.classList.add("coinImg");
 
-    bingoPrompt = `${bingoCell.prompt[i]}`;
+    bingoPrompt = `${bingogay.prompt[i]}`;
 
 
     //bingoCell.appendChild(image);
