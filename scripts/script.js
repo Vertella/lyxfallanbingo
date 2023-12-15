@@ -2,9 +2,9 @@
 const parent = document.getElementById('bingo-card');
 const bingoCard = document.createDocumentFragment();
 const bingoCoin = new Image(220, 220);
-bingoCoin.src = 'images/kr.png';
+bingoCoin.src = '../images/kr.png';
 const bingoCoinBack = new Image (220, 220);
-bingoCoinBack.src = 'images/kr1.png';
+bingoCoinBack.src = '../images/kr1.png';
 
 fetch('../lyx.json')
 .then((response) => {
