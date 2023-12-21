@@ -23,6 +23,7 @@ fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
 
       let bingoCell = document.createElement('p');
       bingoCell.classList.add("bingo-text");
+      bingoCell.addEventListener('click', () => toggleCell(bingoCell));
 
       if (i == 12) {
         let textNode = document.createTextNode('Free Space');
@@ -32,9 +33,8 @@ fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
       } else {
         let textNode = document.createTextNode(bingoPrompt);
         bingoCell.appendChild(textNode);
-        bingoCell.addEventListener('click', () => toggleCell(bingoCell));
-        
       }
+
       bingoCard.appendChild(bingoCon);
       bingoCon.appendChild(bingoCell);   
       i++;
@@ -51,16 +51,35 @@ fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
     return shufflebingo;
   }
 
+
+// Define an array to keep track of marked cells
+const markedCells = [];
+
 // Toggle cell marking
-function toggleCell(cell) {
+function toggleCell(bingoCell) {
   bingoCell.classList.toggle('marked');
-  checkWin(); // Check for Bingo after each cell click
+
+  // Get the index of the clicked cell
+  const index = Array.from(bingoCell.parentNode.parentNode.children).indexOf(BingoCell.parentNode);
+    
+  // Check if the cell is already marked
+  const isMarked = markedCells.includes(index);
+
+  // Update the array of marked cells
+  if (isMarked) {
+    markedCells.splice(markedCells.indexOf(index), 1); // Unmark cell
+  } else {
+    markedCells.push(index); // Mark cell
+  }
+  checkWin();
 }
+
 
 // Function to check for a Bingo win
 function checkWin() {
   const bingoCells = document.querySelectorAll('.bingo-text');
 
+  
   // Define winning patterns (rows, columns, diagonals)
   const patterns = [
     // Rows

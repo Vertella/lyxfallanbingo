@@ -81,6 +81,8 @@ h1 {
 
 .bingo-cell.marked {
     background-image: url("../images/kr1.png");
+    background-size: 100%;
+    
 }
 
 @media (max-width: 768px) {
