@@ -26,7 +26,6 @@ body {
 }
 
 h1 {
-    font-size: 100;
     font-size: calc(120px + 0.5vw);
     font-family: serif;
 }
