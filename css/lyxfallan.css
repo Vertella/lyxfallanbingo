@@ -72,10 +72,6 @@ h1 {
     color: black;
     text-shadow: 1px 1px white;
     shape-inside: circle();
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Adjust positioning */
     cursor: pointer;
 }
 
