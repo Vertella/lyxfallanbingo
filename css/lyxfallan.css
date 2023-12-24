@@ -56,6 +56,7 @@ h1 {
     padding: 4px;
     display: flex;
     align-items: center;
+    justify-content: center;
     object-fit:fill;
     aspect-ratio: 1/1;
     overflow: hidden;
