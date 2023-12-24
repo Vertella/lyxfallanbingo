@@ -78,10 +78,8 @@ h1 {
     transform: scale(1.1);
 }
 
-.bingo-cell.marked {
+.bingo-cell-marked {
     background-image: url("../images/kr1.png");
-    background-size: 100%;
-    color: blue;
     
 }
 

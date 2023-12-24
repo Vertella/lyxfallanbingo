@@ -56,10 +56,11 @@ fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
 const markedCells = [];
 
 // Toggle cell marking
-function toggleCell(bingoCell) {
-  bingoCell.classList.toggle('marked');
+function toggleCell(cell) {
+  bingoCell.classList.toggle('bingo-cell-marked');
+}
 
-  // Get the index of the clicked cell
+  /* Get the index of the clicked cell
   const index = Array.from(bingoCell.parentNode.parentNode.children).indexOf(BingoCell.parentNode);
     
   // Check if the cell is already marked
@@ -108,4 +109,4 @@ function checkWin() {
     }
   }
   alert('No Bingo yet. Keep playing!');
-}
+}*/
