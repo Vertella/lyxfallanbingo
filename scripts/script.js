@@ -23,7 +23,7 @@ fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
 
       let bingoCell = document.createElement('p');
       bingoCell.classList.add("bingo-text");
-      bingoCell.addEventListener('click', () => toggleCell(bingoCell));
+      bingoCell.addEventListener('click', () => toggleCell(bingoCon));
 
       if (i == 12) {
         let textNode = document.createTextNode('Free Space');
@@ -57,7 +57,7 @@ const markedCells = [];
 
 // Toggle cell marking
 function toggleCell(cell) {
-  bingoCell.classList.toggle('bingo-cell-marked');
+  cell.classList.toggle('bingo-cell-marked');
 }
 
   /* Get the index of the clicked cell
