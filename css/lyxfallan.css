@@ -72,7 +72,7 @@ h1 {
     font-weight: bold;
     color: black;
     text-shadow: 1px 1px white;
-    shape-inside: circle();
+    /*shape-inside: circle();*/
     cursor: pointer;
     padding: 4px;
 }
