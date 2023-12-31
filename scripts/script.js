@@ -6,7 +6,7 @@ const bingoCoinBack = new Image(220, 220);
 bingoCoinBack.src = "images/kr1.png";
 
 
-fetch('https://api.jsonbin.io/v3/b/657c22d71f5677401f0e2135')
+fetch('https://api.jsonbin.io/v3/b/658c20fa266cfc3fde6efd08')
   .then((response) => {
     return response.json();
   })

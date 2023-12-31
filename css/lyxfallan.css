@@ -74,6 +74,7 @@ h1 {
     text-shadow: 1px 1px white;
     shape-inside: circle();
     cursor: pointer;
+    padding: 4px;
 }
 
 .bingo-cell:hover {
